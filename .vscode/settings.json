@@ -1,0 +1,4 @@
+{
+    "python.pythonPath": "linenv/bin/python",
+    "terminal.integrated.shell.linux": "/bin/bash"
+}

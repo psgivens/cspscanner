@@ -1,0 +1,31 @@
+Sections of this document can be read by plantuml. There are many tools that can rendor, but the easiest way is to use the online server at http://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000
+
+@startuml Record unsafe login
+title Record unsafe login
+
+actor User as user
+participant "CspScanner" as csps
+participant "mitmproxy" AS mitm
+participant "Target Site" AS target
+
+user -> broswer: login with credentials
+browser -> mitm: credentials
+@enduml
+
+@startuml
+:Start MITM with sticky cookie;
+:Login to the application;
+:Spider the application;
+:Generate a report;
+@enduml
+
+
+@startuml Replay login
+title Record login
+
+participant Script as script
+participant "mitmproxy" AS mitm
+participant "Target Site" AS target
+
+@enduml
+

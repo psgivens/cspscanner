@@ -87,7 +87,8 @@ Function Start-CspsEnv {
     param(
     )
 
-    if (Test-CspsMissing) { RETURN }
+    @( "csps-scanner"
+    ) | ForEach-Object { Start-CspsDocker -Container $_ }
 
 }
 
@@ -231,8 +232,6 @@ Function Build-CspsImage {
         }
     }    
 }
-
-
 
 Function Build-CspsImages {
     param(
