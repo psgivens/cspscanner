@@ -16,6 +16,7 @@ Function Update-CspsModule {
     cp -f $env:PSGIVENS_REPOS/cspscanner/scripts/CspScannerEnv.psm1  $MyPSModulePath/CspScannerEnv/
     Write-Host "Force import-module CspScannerEnv"
     Import-Module -Force CspScannerEnv -Global
+
 }
 
 Function Initialize-CspsEnv {
